@@ -2,7 +2,7 @@
 # Flask Project
 
 <p align="center">
-  <img align="center" width="100%" src=""/>
+  <img align="center" width="100%" src="https://res.cloudinary.com/five-drive/image/upload/v1723133464/yndodcscs6z7e1br7ahf.png"/>
 </p>
 
 This is a Flask-based application with a structured project layout, Docker support, and testing capabilities. It includes authentication, client management, and external services integration.
