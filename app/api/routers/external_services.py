@@ -1,7 +1,6 @@
-from flask import Blueprint, jsonify
+from fastapi import APIRouter
+router = APIRouter()
 
-bp = Blueprint('external_services', __name__)
-
-@bp.route('/external', methods=['GET'])
+@router.get("/external")
 def external_service():
-    return jsonify({"message": "External services endpoint"})
+    return {"message": "External services endpoint"}

@@ -1,3 +1,6 @@
+from pydantic import BaseModel
+
 # Example schema for client
-class ClientSchema:
-    pass
+class ClientSchema(BaseModel):
+    name: str
+    email: str

@@ -1,7 +1,7 @@
-from flask import Blueprint, jsonify
+from app.schemas.client import ClientSchema
+from fastapi import APIRouter
+router = APIRouter()
 
-bp = Blueprint('client', __name__)
-
-@bp.route('/client', methods=['GET'])
-def get_client():
-    return jsonify({"message": "Client endpoint"})
+@router.get("/client", response_model=ClientSchema)
+def get_client() -> ClientSchema:
+    return ClientSchema(name="John Doe", email="john.doe@example.com")

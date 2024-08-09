@@ -1,7 +1,6 @@
-from flask import Blueprint, jsonify
+from fastapi import APIRouter
+router = APIRouter()
 
-bp = Blueprint('auth', __name__)
-
-@bp.route('/login', methods=['POST'])
-def login():
-    return jsonify({"message": "Login endpoint"})
+@router.post("/auth")
+def auth():
+    return {"message": "Login endpoint"}

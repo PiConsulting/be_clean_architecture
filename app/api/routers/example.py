@@ -1,7 +1,6 @@
-from flask import Blueprint, jsonify
+from fastapi import APIRouter
+router = APIRouter()
 
-bp = Blueprint('example', __name__)
-
-@bp.route('/example', methods=['GET'])
+@router.get("/example")
 def example_route():
-    return jsonify({"message": "Example endpoint"})
+    return {"message": "Example endpoint"}
